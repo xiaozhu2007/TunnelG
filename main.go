@@ -7,12 +7,12 @@ import (
 	"net"
 	"strings"
 	"sync"
-  "flag"
+  	"flag"
 )
 
 var (
-    ports   = flag.Int("ports", 3000, "Ports to forward")
-    backend = flag.Int("backend", 3001, "Backend to receive requests")
+    ports   = flag.String("ports", "80,443,3000", "Ports to forward")
+    backend = flag.String("backend", "1.dev", "Backend to receive requests")
 )
 
 func main() {
